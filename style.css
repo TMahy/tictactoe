@@ -1,0 +1,111 @@
+/* Custom Properties */
+:root {
+    --ff-primary: 'Trebuchet MS',sans-serif;
+    --ff-secondary: 'Monaco', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light:#fff; /*#fff;*/
+    --clr-dark: #2c2c2c;
+    --clr-accent: #27b36d; /* #16e0bd; */
+    --clr-accent-2: #1493c9;  
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs:0.25em 0.25em 0.75em rgba(0,0,0,0.25), 
+    0.125em 0.125em 0.25em rgba(0,0,0,0.15); 
+
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(45deg, var(--clr-accent)0%, var(--clr-accent-2) 100%);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    color: var(--clr-dark);
+    text-align: center;
+    overflow: hidden; 
+}
+
+h1 {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h1);
+    text-decoration: none ;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+   
+}
+
+#gameContainer {
+    text-align: center;
+    padding: 1.75em;
+    display: inline-block;
+    background: var(--clr-light);
+    box-shadow: var(--bs);
+    margin: 3em auto;
+    border-radius: 25px
+}
+
+#cellContainer {
+    width: 300px;
+    height: 300px; 
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#cellContainer div{
+    outline:4px solid var(--clr-dark);
+    overflow: hidden;
+}
+
+#cellContainer div:last-child{
+    grid-area: 3/3;
+    overflow: hidden;
+}
+
+.cell{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 75px;
+    overflow: hidden;
+}
+
+.cell:hover{
+    background-color: #3f3f3f56;
+    z-index: 100;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.75em 2.5em;
+    color: var(--clr-dark);
+    text-decoration: none ;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transforms 200ms ease-in-out;
+    border: 1px solid var(--clr-light);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--clr-dark);
+    box-shadow: var(--bs);
+}
+
+
